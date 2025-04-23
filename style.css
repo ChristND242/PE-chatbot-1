@@ -1,0 +1,47 @@
+.chat-container {
+    height: calc(100vh - 180px);
+  }
+  .chat-history {
+    height: calc(100vh - 240px);
+  }
+  .typing-indicator:after {
+    content: "...";
+    animation: typing 1.5s infinite;
+    display: inline-block;
+    width: 0;
+  }
+  @keyframes typing {
+    0% {
+      content: ".";
+    }
+    33% {
+      content: "..";
+    }
+    66% {
+      content: "...";
+    }
+  }
+  .slide-in {
+    animation: slideIn 0.3s ease-out;
+  }
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  .fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
